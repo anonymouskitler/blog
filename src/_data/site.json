@@ -1,0 +1,11 @@
+{
+  "showThemeCredit": false,
+  "name": "Chandrasekhar's blog",
+  "shortDesc": "Deep learning & others",
+  "url": "https://chandureddyvari.com",
+  "authorEmail": "chandureddivari@gmail.com",
+  "authorHandle": "@chandureddivari",
+  "authorName": "Chandra Sekhar",
+  "enableThirdPartyComments": false,
+  "maxPostsPerPage": 5
+}
