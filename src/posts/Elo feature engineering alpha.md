@@ -21,23 +21,23 @@ tags:
   - [Feature: Add date features meta info](#heading-feature:-add-date-features-meta-info)
   - [Feature: Add derived date features](#heading-feature:-add-derived-date-features)
   - [Feature: Reverse engineering purchase amount column](#heading-feature:-reverse-engineering-purchase-amount-column)
-  - [Feature: Aggregates grouped by month & card_id](#heading-feature:-aggregates-grouped-by-month-and-cardid)
+  - [Feature: Aggregates grouped by month & card_id](#heading-feature:-aggregates-grouped-by-month-and-card_id)
   - [Feature: Time between successive transactions](#heading-feature:-time-between-successive-transactions)
   - [Feature: Holiday features](#heading-feature:-holiday-features)
   - [Feature: Latest & First 5 feature aggregates](#heading-feature:-latest-and-first-5-feature-aggregates)
   - [Feature: Merchants features](#heading-feature:-merchants-features)
-  - [Aggregate: Aggregate by card_id](#heading-aggregate:-aggregate-by-cardid)
+  - [Aggregate: Aggregate by card_id](#heading-aggregate:-aggregate-by-card_id)
   - [Feature: Add exta interpreted columns on aggregates](#heading-feature:-add-exta-interpreted-columns-on-aggregates)
   - [Aggregate: Aggregate on categories](#heading-aggregate:-aggregate-on-categories)
   - [Aggregate: Aggregate on month](#heading-aggregate:-aggregate-on-month)
   - [Feature: Reverse engineering observed date aka reference date](#heading-feature:-reverse-engineering-observed-date-aka-reference-date)
-  - [Aggregates: Merge train & test with new & old transactions history](#heading-aggregate:s-merge-train-and-test-with-new-and-old-transactions-history)
-  - [Feature: Adding features based on observed_date](#heading-feature:-adding-features-based-on-observeddate)
+  - [Aggregates: Merge train & test with new & old transactions history](#heading-aggregates:-merge-train-and-test-with-new-and-old-transactions-history)
+  - [Feature: Adding features based on observed_date](#heading-feature:-adding-features-based-on-observed_date)
   - [Feature: Add features based on old & new transactions](#heading-feature:-add-features-based-on-old-and-new-transactions)
   - [Feature: Redo some date features with observed time](#heading-feature:-redo-some-date-features-with-observed-time)
   - [Feature: Mark the outliers](#heading-feature:-mark-the-outliers)
   - [Feature: Redo features based on new purchase amount](#heading-feature:-redo-features-based-on-new-purchase-amount)
-- [Feature Selection](#heading-feature:-selection)
+- [Feature Selection](#heading-feature-selection)
 - [Model training](#heading-model-training)
   - [Cross validation data set](#heading-cross-validation-data-set)
   - [LGBM model](#heading-lgbm-model)
@@ -63,11 +63,11 @@ We will need, at a minimum, the train.csv and test.csv files. These contain the 
 
 The data is formatted as follows:
 
-train.csv and test.csv contain card_ids and information about the card itself - the first month the card was active, etc. train.csv also contains the target.
+`train.csv` and `test.csv` contain card_ids and information about the card itself - the first month the card was active, etc. `train.csv` also contains the target.
 
-historical_transactions.csv and new_merchant_transactions.csv are designed to be joined with train.csv, test.csv, and merchants.csv. They contain information about transactions for each card, as described above.
+`historical_transactions.csv` and `new_merchant_transactions.csv` are designed to be joined with `train.csv`, `test.csv`, and `merchants.csv`. They contain information about transactions for each card, as described above.
 
-merchants.csv can be joined with the transaction sets to provide additional merchant-level information.
+`merchants.csv` can be joined with the transaction sets to provide additional merchant-level information.
 
 #### What are we predicting?
 
@@ -75,12 +75,17 @@ We are predicting a loyalty score for each card_id represented in test.csv and s
 
 #### File descriptions
 
-train.csv - the training set
-test.csv - the test set
-sample_submission.csv - a sample submission file in the correct format - contains all card_ids we are expected to predict for.
-historical_transactions.csv - up to 3 months' worth of historical transactions for each card_id
-merchants.csv - additional information about all merchants / merchant_ids in the dataset.
-new_merchant_transactions.csv - two months' worth of data for each card_id containing ALL purchases that card_id made at merchant_ids that were not visited in the historical data.
+`train.csv` - the training set
+
+`test.csv` - the test set
+
+`sample_submission.csv` - a sample submission file in the correct format - contains all card_ids we are expected to predict for.
+
+`historical_transactions.csv` - up to 3 months' worth of historical transactions for each card_id
+
+`merchants.csv` - additional information about all merchants / merchant_ids in the dataset.
+
+`new_merchant_transactions.csv` - two months' worth of data for each card_id containing ALL purchases that card_id made at merchant_ids that were not visited in the historical data.
 
 #### Data fields
 
