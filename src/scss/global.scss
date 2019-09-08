@@ -2,6 +2,7 @@
 
 // Pull in the stalfos lib
 @import '../../node_modules/stalfos/stalfos.scss';
+@import '../../node_modules/normalize-scss/sass/normalize.scss';
 
 // Local mixins
 @import 'mixins/dark-mode';
@@ -51,6 +52,7 @@ hr {
 
 // Components
 @import 'components/button';
+@import 'components/table';
 @import 'components/heading-permalink';
 @import 'components/intro';
 @import 'components/nav';

@@ -1,0 +1,88 @@
+th {
+  border-bottom: 4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  padding: 24px;
+  text-align: left;
+  vertical-align: middle;
+}
+
+table {
+  width: 100%;
+  background-color: #ffffff;
+  border-collapse: collapse;
+  border-width: 2px;
+  border-color: var(--color-action-text);
+  border-style: solid;
+  font-size: 13px;
+}
+
+table td,
+table th {
+  border-width: 2px;
+  border-color: #fedb8b;
+  border-style: solid;
+  padding: 5px;
+}
+table tr {
+    overflow: scroll;
+}
+table thead {
+  background-color: #fedb8b;
+}
+
+th:first-child {
+  border-top-left-radius: 3px;
+}
+
+th:last-child {
+  border-top-right-radius: 3px;
+  border-right: none;
+}
+
+tr:first-child {
+  border-top: none;
+}
+
+tr:last-child {
+  border-bottom: none;
+}
+
+tr:nth-child(odd) td {
+  background: #ebebeb;
+}
+
+tr:last-child td:first-child {
+  border-bottom-left-radius: 3px;
+}
+
+tr:last-child td:last-child {
+  border-bottom-right-radius: 3px;
+}
+
+td:last-child {
+  border-right: 0px;
+}
+
+th.text-left {
+  text-align: left;
+}
+
+th.text-center {
+  text-align: center;
+}
+
+th.text-right {
+  text-align: right;
+}
+
+td.text-left {
+  text-align: left;
+}
+
+td.text-center {
+  text-align: center;
+}
+
+td.text-right {
+  text-align: right;
+}

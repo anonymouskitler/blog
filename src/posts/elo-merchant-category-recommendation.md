@@ -12,7 +12,6 @@ tags:
 
 Contents:
 1. Data preprocessing
-2. EDA
 3. Feature engineering
 4. New features for Elo merchant competition
 5. Aggregations on the features

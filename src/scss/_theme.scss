@@ -3,6 +3,7 @@
   @each $color in $stalfos-colors {
     #{'--color-' + nth($color, 1)}: #{nth($color, 2)};
   }
+  @include normalize();
 
   // Set theme aliases
   --color-mode: 'light';
