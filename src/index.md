@@ -5,4 +5,4 @@ postsHeading: Latest posts
 archiveButtonText: See all posts
 socialImage: ''
 ---
-I blog on my learnings in domains of Machine learning & deep learning. 
+I blog here my learnings in Machine learning & deep learning space. 

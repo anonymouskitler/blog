@@ -1,5 +1,5 @@
 ---
-title: Kaggle Elo merchant category recommendation competition solution to top 3% in private leaderboard
+title: Feature engineering of kaggle Elo merchant competition - Top 3% solution 🔥
 date: '2019-09-02'
 tags:
   - tabular-data
