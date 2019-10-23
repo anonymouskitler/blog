@@ -10,6 +10,10 @@ tags:
   - kaggle
 ---
 
+> TLDR; Complete notebook is available [here](https://github.com/chandureddivari/kaggle/blob/master/Elo%20feature%20engineering%20alpha.ipynb)
+
+I'm writing an exhaustive list of steps with code on feature engineering done for Kaggles' Elo merchant recommendation competition.
+
 - [Elo Merchant Competition](#heading-elo-merchant-competition)
     - [What files do we need?](#heading-what-files-do-we-need)
     - [What should we expect the data format to be?](#heading-what-should-we-expect-the-data-format-to-be)
@@ -3375,14 +3379,10 @@ def get_cat_agg(df):
 %time hist_trans_agg_cat, new_hist_trans_agg_cat = [get_cat_agg(df) for df in [hist_trans, new_hist_trans]]
 ```
 
-    CPU times: user 30.4 s, sys: 9.67 s, total: 40.1 s
-    Wall time: 27.9 s
 
 ```python
 hist_trans_agg_cat.shape, new_hist_trans_agg_cat.shape
 ```
-
-    ((325540, 24), (290001, 22))
 
 Let's have a look at our newly calculated aggregates
 
