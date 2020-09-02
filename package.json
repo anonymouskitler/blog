@@ -18,7 +18,7 @@
     "stalfos": "github:andybelldesign/stalfos#c8971d22726326cfc04089b2da4d51eeb1ebb0eb"
   },
   "devDependencies": {
-    "bl": "^3.0.0",
+    "bl": "^3.0.1",
     "chokidar-cli": "^2.0.0",
     "cross-env": "^5.2.0",
     "make-dir-cli": "^2.0.0",
